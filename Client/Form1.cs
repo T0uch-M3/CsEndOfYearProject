@@ -15,27 +15,30 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Form1 : Form//CCCCCCCCCCCCCCCCCCCCLIENT
+    public partial class Form1 : MetroFramework.Forms.MetroForm//CCCCCCCCCCCCCCCCCCCCLIENT
     {
         public Form1()
         {
             InitializeComponent();
         }
-        SimpleTcpClient client;
-        byte[] data = new byte[1024];
-        private void btnConnect_Click(object sender, EventArgs e)
+
+        public Form1(SimpleTcpClient client1)
         {
-            client.Connect(txtIp.Text.ToString(), Int32.Parse(txtPort.Text));
-            btnConnect.Enabled = false;
-            
+            // TODO: Complete member initialization
+            this.client = client1;
+            InitializeComponent();
         }
+        public SimpleTcpClient client;
+        byte[] data = new byte[1024];
+        
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            client = new SimpleTcpClient();
+            //client = new SimpleTcpClient();
             client.StringEncoder = Encoding.UTF8;
             client.DataReceived += Client_DataRecieved;
-           
+            sendMsg("/S" + "Intered", client.TcpClient);
         }
 
         private void Client_DataRecieved(object sender, SimpleTCP.Message e)
@@ -48,10 +51,19 @@ namespace Client
 
         }
 
+        private void txtMessage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                String s = "/M" + txtMessage.Text;
+                sendMsg(s, client.TcpClient);
+            }
+        }
         private void btnSend_Click(object sender, EventArgs e)
         {
             String s = "/M" + txtMessage.Text;
             sendMsg(s, client.TcpClient);
+            txtMessage.Text = "";
               //client.WriteLineAndGetReply(txtMessage.Text, TimeSpan.FromSeconds(3));
               //client.Write(txtMessage.Text);
         }
@@ -141,7 +153,7 @@ namespace Client
 
             //catch (SocketException e)
             //{
-            //    System.Console.WriteLine("Fucked connectin");
+            //    System.Console.WriteLine("RIP connectin");
             //}
 
             //************************************* waiting testing, check if the ip adrs is the other machine adr or no***************
@@ -214,10 +226,10 @@ namespace Client
         private void confirm_btn_Click(object sender, EventArgs e)
         {
             //client.WriteLine("/L"+tbLogin.Text);
-            String s = "/L" + tbLogin.Text;
-            sendMsg(s, client.TcpClient);
-            System.Threading.Thread.Sleep(500);
-            client.WriteLine("/P"+tbPwd.Text);
+            //String s = "/L" + tbLogin.Text;
+            //sendMsg(s, client.TcpClient);
+            //System.Threading.Thread.Sleep(500);
+            //client.WriteLine("/P"+tbPwd.Text);
         }
 
         public void sendMsg(String s, TcpClient target)
@@ -226,5 +238,9 @@ namespace Client
             data = Encoding.ASCII.GetBytes(welcome);
             target.GetStream().Write(data, 0, data.Length);
         }
+
+
+
+       
     }
 }

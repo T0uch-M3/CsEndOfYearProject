@@ -28,167 +28,184 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPort = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIp = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnConnect = new System.Windows.Forms.Button();
-            this.txtMessage = new System.Windows.Forms.TextBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.tbLogin = new System.Windows.Forms.TextBox();
-            this.confirm_btn = new System.Windows.Forms.Button();
-            this.tbPwd = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.RichTextBox();
+            this.txtMessage = new MetroFramework.Controls.MetroTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtPort
-            // 
-            this.txtPort.Location = new System.Drawing.Point(205, 35);
-            this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(75, 20);
-            this.txtPort.TabIndex = 9;
-            this.txtPort.Text = "8910";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(157, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Port";
-            // 
-            // txtIp
-            // 
-            this.txtIp.Location = new System.Drawing.Point(78, 35);
-            this.txtIp.Name = "txtIp";
-            this.txtIp.Size = new System.Drawing.Size(75, 20);
-            this.txtIp.TabIndex = 7;
-            this.txtIp.Text = "192.168.1.147";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Host";
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.Location = new System.Drawing.Point(305, 35);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(75, 23);
-            this.btnConnect.TabIndex = 10;
-            this.btnConnect.Text = "Connect";
-            this.btnConnect.UseVisualStyleBackColor = true;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Location = new System.Drawing.Point(22, 80);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(358, 63);
-            this.txtMessage.TabIndex = 11;
-            // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(305, 154);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
-            this.btnSend.TabIndex = 12;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(305, 303);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
-            this.btnTest.TabIndex = 14;
-            this.btnTest.Text = "test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
-            // tbLogin
-            // 
-            this.tbLogin.Location = new System.Drawing.Point(22, 154);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(152, 20);
-            this.tbLogin.TabIndex = 15;
-            // 
-            // confirm_btn
-            // 
-            this.confirm_btn.Location = new System.Drawing.Point(205, 185);
-            this.confirm_btn.Name = "confirm_btn";
-            this.confirm_btn.Size = new System.Drawing.Size(75, 23);
-            this.confirm_btn.TabIndex = 16;
-            this.confirm_btn.Text = "confirm";
-            this.confirm_btn.UseVisualStyleBackColor = true;
-            this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
-            // 
-            // tbPwd
-            // 
-            this.tbPwd.Location = new System.Drawing.Point(22, 185);
-            this.tbPwd.Name = "tbPwd";
-            this.tbPwd.Size = new System.Drawing.Size(152, 20);
-            this.tbPwd.TabIndex = 17;
             // 
             // txtStatus
             // 
-            this.txtStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.txtStatus.ForeColor = System.Drawing.Color.White;
             this.txtStatus.HideSelection = false;
-            this.txtStatus.Location = new System.Drawing.Point(22, 341);
+            this.txtStatus.Location = new System.Drawing.Point(226, 66);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(329, 130);
+            this.txtStatus.Size = new System.Drawing.Size(392, 399);
             this.txtStatus.TabIndex = 18;
             this.txtStatus.Text = "";
+            // 
+            // txtMessage
+            // 
+            // 
+            // 
+            // 
+            this.txtMessage.CustomButton.Image = null;
+            this.txtMessage.CustomButton.Location = new System.Drawing.Point(341, 1);
+            this.txtMessage.CustomButton.Name = "";
+            this.txtMessage.CustomButton.Size = new System.Drawing.Size(53, 53);
+            this.txtMessage.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMessage.CustomButton.TabIndex = 1;
+            this.txtMessage.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMessage.CustomButton.UseSelectable = true;
+            this.txtMessage.CustomButton.Visible = false;
+            this.txtMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMessage.Lines = new string[0];
+            this.txtMessage.Location = new System.Drawing.Point(0, 0);
+            this.txtMessage.MaxLength = 32767;
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PasswordChar = '\0';
+            this.txtMessage.PromptText = "Write somethi,gh to send";
+            this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMessage.SelectedText = "";
+            this.txtMessage.SelectionLength = 0;
+            this.txtMessage.SelectionStart = 0;
+            this.txtMessage.ShortcutsEnabled = true;
+            this.txtMessage.Size = new System.Drawing.Size(395, 55);
+            this.txtMessage.TabIndex = 20;
+            this.txtMessage.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtMessage.UseSelectable = true;
+            this.txtMessage.WaterMark = "Write somethi,gh to send";
+            this.txtMessage.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMessage.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMessage_KeyDown);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtMessage);
+            this.panel3.Location = new System.Drawing.Point(226, 471);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(395, 55);
+            this.panel3.TabIndex = 23;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 16);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(194, 28);
+            this.metroLabel1.TabIndex = 20;
+            this.metroLabel1.Text = "Connected Users";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.metroButton2);
+            this.groupBox1.Controls.Add(this.metroLabel1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Location = new System.Drawing.Point(20, 60);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 466);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroButton2.Location = new System.Drawing.Point(3, 44);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(194, 23);
+            this.metroButton2.TabIndex = 21;
+            this.metroButton2.Text = "Client1 Offline";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseSelectable = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.metroTextBox1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(3, 411);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(194, 52);
+            this.groupBox2.TabIndex = 23;
+            this.groupBox2.TabStop = false;
+            // 
+            // metroTextBox1
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(156, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(31, 31);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTextBox1.Enabled = false;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(3, 16);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.PromptText = "Search...";
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(188, 33);
+            this.metroTextBox1.TabIndex = 0;
+            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMark = "Search...";
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 503);
+            this.ClientSize = new System.Drawing.Size(641, 546);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtStatus);
-            this.Controls.Add(this.tbPwd);
-            this.Controls.Add(this.confirm_btn);
-            this.Controls.Add(this.tbLogin);
-            this.Controls.Add(this.btnTest);
-            this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.btnConnect);
-            this.Controls.Add(this.txtPort);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIp);
-            this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Client";
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Default;
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtPort;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIp;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnConnect;
-        private System.Windows.Forms.TextBox txtMessage;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.TextBox tbLogin;
-        private System.Windows.Forms.Button confirm_btn;
-        private System.Windows.Forms.TextBox tbPwd;
         private System.Windows.Forms.RichTextBox txtStatus;
+        private MetroFramework.Controls.MetroTextBox txtMessage;
+        private System.Windows.Forms.Panel panel3;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
     }
 }
 
