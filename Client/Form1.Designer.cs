@@ -33,9 +33,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.tb_AccountName = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,17 +123,6 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
-            // metroButton2
-            // 
-            this.metroButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroButton2.Location = new System.Drawing.Point(3, 44);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(194, 23);
-            this.metroButton2.TabIndex = 21;
-            this.metroButton2.Text = "Client1 Offline";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.UseSelectable = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.metroTextBox1);
@@ -176,11 +168,80 @@
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroButton2.Location = new System.Drawing.Point(3, 44);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(194, 23);
+            this.metroButton2.TabIndex = 21;
+            this.metroButton2.Text = "Client1 Offline";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseSelectable = true;
+            // 
+            // tb_AccountName
+            // 
+            // 
+            // 
+            // 
+            this.tb_AccountName.CustomButton.Image = null;
+            this.tb_AccountName.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.tb_AccountName.CustomButton.Name = "";
+            this.tb_AccountName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_AccountName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_AccountName.CustomButton.TabIndex = 1;
+            this.tb_AccountName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_AccountName.CustomButton.UseSelectable = true;
+            this.tb_AccountName.CustomButton.Visible = false;
+            this.tb_AccountName.Lines = new string[0];
+            this.tb_AccountName.Location = new System.Drawing.Point(20, 38);
+            this.tb_AccountName.MaxLength = 32767;
+            this.tb_AccountName.Name = "tb_AccountName";
+            this.tb_AccountName.PasswordChar = '\0';
+            this.tb_AccountName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_AccountName.SelectedText = "";
+            this.tb_AccountName.SelectionLength = 0;
+            this.tb_AccountName.SelectionStart = 0;
+            this.tb_AccountName.ShortcutsEnabled = true;
+            this.tb_AccountName.Size = new System.Drawing.Size(200, 23);
+            this.tb_AccountName.TabIndex = 25;
+            this.tb_AccountName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tb_AccountName.UseSelectable = true;
+            this.tb_AccountName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_AccountName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_AccountName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_AccountName_KeyPress);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(19, 16);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel2.TabIndex = 26;
+            this.metroLabel2.Text = "Account Name";
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.BackColor = System.Drawing.Color.Red;
+            this.metroLabel5.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel5.Location = new System.Drawing.Point(623, 487);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(16, 19);
+            this.metroLabel5.TabIndex = 32;
+            this.metroLabel5.Text = "8";
+            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel5.UseCustomForeColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 546);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.tb_AccountName);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtStatus);
@@ -193,6 +254,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -206,6 +268,9 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox tb_AccountName;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }
 

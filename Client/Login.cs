@@ -53,7 +53,9 @@ namespace Client
             String s = "/L" + loginCode.Text;
             sendMsg(s, client.TcpClient);
             System.Threading.Thread.Sleep(500);
-            client.WriteLine("/P" + password.Text);
+            String s2 = "/P" + password.Text;
+            sendMsg(s2, client.TcpClient);
+            //client.WriteLine("/P" + password.Text);
         }
         public void sendMsg(String s, TcpClient target)
         {

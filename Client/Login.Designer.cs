@@ -38,6 +38,10 @@
             this.txtPort = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -232,11 +236,67 @@
             this.metroLabel4.Text = "Host";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.BackColor = System.Drawing.Color.Red;
+            this.metroLabel5.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel5.Location = new System.Drawing.Point(13, 260);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(16, 19);
+            this.metroLabel5.TabIndex = 32;
+            this.metroLabel5.Text = "4";
+            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel5.UseCustomForeColor = true;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.BackColor = System.Drawing.Color.Red;
+            this.metroLabel6.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel6.Location = new System.Drawing.Point(272, 279);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(16, 19);
+            this.metroLabel6.TabIndex = 33;
+            this.metroLabel6.Text = "5";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel6.UseCustomForeColor = true;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.BackColor = System.Drawing.Color.Red;
+            this.metroLabel7.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel7.Location = new System.Drawing.Point(225, 106);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(16, 19);
+            this.metroLabel7.TabIndex = 34;
+            this.metroLabel7.Text = "6";
+            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel7.UseCustomForeColor = true;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.BackColor = System.Drawing.Color.Red;
+            this.metroLabel8.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel8.Location = new System.Drawing.Point(211, 204);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(16, 19);
+            this.metroLabel8.TabIndex = 35;
+            this.metroLabel8.Text = "7";
+            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel8.UseCustomForeColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 332);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.metroLabel3);
@@ -269,5 +329,9 @@
         private MetroFramework.Controls.MetroTextBox txtPort;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
     }
 }

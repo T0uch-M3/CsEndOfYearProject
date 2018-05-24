@@ -30,6 +30,7 @@ namespace Client
         }
         public SimpleTcpClient client;
         byte[] data = new byte[1024];
+        String message;
         
        
 
@@ -43,12 +44,25 @@ namespace Client
 
         private void Client_DataRecieved(object sender, SimpleTCP.Message e)
         {
-            txtStatus.Invoke((MethodInvoker)delegate(){
-                txtStatus.Clear();
-                txtStatus.AppendText(e.MessageString);
-                //txtStatus.Text = txtStatus.Text.Insert(0, e.MessageString + "\n");
-            });
-
+            message = e.MessageString;
+            if (!uncode(e.MessageString).Equals("/A"))
+            {
+                txtStatus.Invoke((MethodInvoker)delegate()
+                {
+                    txtStatus.Clear();
+                    txtStatus.AppendText(e.MessageString);
+                    //txtStatus.Text = txtStatus.Text.Insert(0, e.MessageString + "\n");
+                });
+            }
+            if (uncode(e.MessageString).Equals("/A"))
+            {
+                txtStatus.Invoke((MethodInvoker)delegate()
+                {
+                    tb_AccountName.Text = message.Remove(0, 2);
+                    System.Console.WriteLine("detectig /A");
+                });
+            }
+            
         }
 
         private void txtMessage_KeyDown(object sender, KeyEventArgs e)
@@ -57,6 +71,7 @@ namespace Client
             {
                 String s = "/M" + txtMessage.Text;
                 sendMsg(s, client.TcpClient);
+                txtMessage.Text = "";
             }
         }
         private void btnSend_Click(object sender, EventArgs e)
@@ -239,8 +254,20 @@ namespace Client
             target.GetStream().Write(data, 0, data.Length);
         }
 
+        private void tb_AccountName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            String s = "/A" + tb_AccountName.Text;
+            sendMsg(s, client.TcpClient);
+        }
 
 
+        public string uncode(string s)
+        {
+            string code = "", ss = "";
+            code = message[0].ToString() + message[1].ToString();
+            System.Console.WriteLine("Code::" + code);
+            return code;
+        }
        
     }
 }
